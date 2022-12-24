@@ -1,0 +1,55 @@
+﻿Result for| doublerAppend(using push () method) | doublerInsert(using unshift() method)
+Extra large array  		4.5032 ms       			1.2151663 s
+Large array     		581.7 μs					13.7836 ms
+Medium array			327.7 μs					884.8 μs
+Small array				199.4 μs					416.1 μs
+Tiny array				62.1 μs						300 μs
+	
+
+CONCLUSION : As we can see from the results, the doublerInsert() function which uses push() method on array is far
+ faster than the doublerAppend() function which uses unshift() method of array for doing the same function.
+
+
+ The Array.push() has a Constant Time Complexity and so is O(1). All it does is add an element and give it an 
+ index that’s 1 greater than the index of the last element in the array. So it doesn’t matter whether the array has 
+ 10 elements or 1000.The number of operations that need to be performed won’t change. The same however cannot be said 
+ about Array.unshift(). Adding an element at the beginning of an array means the new element will have an index of 0. 
+ Which means that the index of every other element must be incremented by 1. So Array.unshift() has a Linear Time
+  Complexity and is O(n). 
+
+
+* Time complexity of Array.push() = O(1)
+* Time complexity of Array.unshift()= O(n)
+
+
+Scalability refers to the ability of a system (here it is functions) to perform well under an increased or expanding 
+workload. Hence doublerAppend() will scale better than doublerInsert() function.
+
+
+
+review / research on why the slower function is so slow:
+
+
+Unshift has a computational complexity of O(N+X), where N is the number of arguments passed to unshift and X is the 
+number of elements in the array or array-like object. This means that the time taken to execute the operation scales 
+linearly with the number of elements in the array. This can quickly get expensive, particularly if we're repeatedly 
+calling unshift within some sort of loop construct. 
+
+
+function doublerInsert(nums){
+
+
+    let new_nums = [];
+
+
+    for (let i=0; i<nums.length; i++){
+        let num = nums[i] * 2;
+        new_nums.unshift(num);
+    }
+
+
+}
+
+
+Here in the above example we are doing the same , We are using the unshift() method of array in loop and passing a 
+different set of input consisting of tiny to extra large numbers in array.
