@@ -78,7 +78,7 @@ console.log(result);
 console.log("-------------------------")
 
 //TIME COMPLEXITY FOR addToZero FUNCTION : O(n^2) or O(n power 2)
-//SPACE COMPLEXITY: O(1)
+//SPACE COMPLEXITY: O(n)
 
 //-------------------------------------------------------------------------------------------------------------
 //Unique Characters
@@ -146,4 +146,4 @@ let res = findLongestWord(["hi", "hello"]);
 console.log(res);
 
 //TIME COMPLEXITY FOR findLongestWord FUNCTION:O(n)
-//SPACE COMPLEXITY:O(1)
+//SPACE COMPLEXITY:O(n)
